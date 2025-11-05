@@ -14,8 +14,6 @@
             --text-color: #333333;
             --light-bg: #F9F9F9;
             --white: #FFFFFF;
-            --gradient-start: #e0f2f7; /* Light blue */
-            --gradient-end: #cbe9f2; /* Slightly darker blue */
         }
 
         * {
@@ -90,28 +88,10 @@
 
         /* HERO SECTION */
         .hero {
-            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            background-color: var(--light-bg);
             padding: 80px 0;
             text-align: center;
             border-bottom: 5px solid var(--primary-color);
-            position: relative;
-            overflow: hidden; /* To contain background elements */
-        }
-        .hero::before { /* Subtle pattern or image behind */
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://via.placeholder.com/1500x300/e0f2f7/cbe9f2?text=Subtle+Pattern'); /* Placeholder, replace with a subtle texture or AC-related pattern */
-            background-size: cover;
-            opacity: 0.1; /* Very light */
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
         }
         .hero h1 {
             font-family: 'Montserrat', sans-serif;
@@ -178,28 +158,10 @@
             font-weight: 800;
             margin-bottom: 15px;
             border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            color: transparent; /* Hide text if image is used */
         }
-        /* Specific brand styles with placeholder images */
-        .danfoss { 
-            background-image: url('https://via.placeholder.com/200x80/CC0000/FFFFFF?text=Danfoss+Logo'); 
-            background-color: var(--primary-color);
-        }
-        .ogeneral { 
-            background-image: url('https://via.placeholder.com/200x80/FFFFFF/004C99?text=O_General+Logo'); 
-            border: 2px solid var(--secondary-color); 
-            background-color: #fff;
-        }
-        .mitsubishi { 
-            background-image: url('https://via.placeholder.com/200x80/E6E6E6/333333?text=Mitsubishi+Logo'); 
-            background-color: #e6e6e6;
-        }
+        .danfoss { color: var(--white); background-color: var(--primary-color); }
+        .ogeneral { color: var(--secondary-color); border: 2px solid var(--secondary-color); background-color: #fff; }
+        .mitsubishi { color: #555; background-color: #e6e6e6; }
         
         .brand-card h3 {
             font-family: 'Montserrat', sans-serif;
@@ -213,7 +175,7 @@
 
         /* SERVICES SECTION */
         .services-section {
-            background: linear-gradient(135deg, var(--white) 0%, var(--light-bg) 100%); /* Subtle gradient */
+            background-color: var(--light-bg);
         }
         .services-list {
             display: flex;
@@ -228,22 +190,6 @@
             border-left: 4px solid var(--primary-color);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             margin-bottom: 20px;
-            display: flex; /* For icon/image and text */
-            align-items: center;
-        }
-        .service-icon {
-            margin-right: 15px;
-            font-size: 2.5em; /* Placeholder for an actual icon or image */
-            color: var(--secondary-color);
-        }
-        .service-image {
-            width: 80px; /* Example size */
-            height: 80px;
-            margin-right: 15px;
-            border-radius: 8px;
-            object-fit: cover;
-            border: 1px solid #eee;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .service-item h4 {
             color: var(--secondary-color);
@@ -341,7 +287,7 @@
     </nav>
 
     <section class="hero">
-        <div class="hero-content container">
+        <div class="container">
             <h1>Specialists in Refrigeration & Air Conditioning</h1>
             <p>Your authorized partner for sales, installation, and expert maintenance of Danfoss, OGENERAL, and MITSUBISHI systems in Nalgonda.</p>
             <a href="#contact" class="btn-primary">Get a Service Quote</a>
@@ -387,35 +333,23 @@
             <div class="services-list">
                 
                 <div class="service-item">
-                    <img src="https://via.placeholder.com/80x80?text=AC+Types" alt="AC unit types" class="service-image">
-                    <div>
-                        <h4>All AC and Refrigeration Types</h4>
-                        <p>Installation and servicing for all residential, commercial, and industrial cooling units.</p>
-                    </div>
+                    <h4>All AC and Refrigeration Types</h4>
+                    <p>Installation and servicing for all residential, commercial, and industrial cooling units.</p>
                 </div>
                 
                 <div class="service-item">
-                    <img src="https://via.placeholder.com/80x80?text=VRV+VRF" alt="VRV VRF system" class="service-image">
-                    <div>
-                        <h4>VRV / VRF Systems</h4>
-                        <p>Specialists in Variable Refrigerant Volume/Flow (VRV/VRF) system setup and repairs.</p>
-                    </div>
+                    <h4>VRV / VRF Systems</h4>
+                    <p>Specialists in Variable Refrigerant Volume/Flow (VRV/VRF) system setup and repairs.</p>
                 </div>
                 
                 <div class="service-item">
-                    <img src="https://via.placeholder.com/80x80?text=Ductable" alt="Ductable AC system" class="service-image">
-                    <div>
-                        <h4>Ductable Centralised Systems</h4>
-                        <p>Comprehensive solutions for large-scale ductable and centralised cooling projects.</p>
-                    </div>
+                    <h4>Ductable Centralised Systems</h4>
+                    <p>Comprehensive solutions for large-scale ductable and centralised cooling projects.</p>
                 </div>
 
                 <div class="service-item">
-                    <img src="https://via.placeholder.com/80x80?text=Maintenance" alt="AC maintenance" class="service-image">
-                    <div>
-                        <h4>Installation & Maintenance</h4>
-                        <p>Complete installation services and AMC (Annual Maintenance Contracts) for long-term reliability.</p>
-                    </div>
+                    <h4>Installation & Maintenance</h4>
+                    <p>Complete installation services and AMC (Annual Maintenance Contracts) for long-term reliability.</p>
                 </div>
             </div>
         </div>
