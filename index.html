@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danfoss, OGENERAL, MITSUBISHI AC & Refrigeration Sales and Service | Nalgonda</title>
-    <meta name="description" content="Authorized expert for Danfoss, OGENERAL, and MITSUBISHI AC and Refrigeration Sales and Service in Nalgonda. Specialized in VRV, VRF, and centralized cooling solutions.">
-    <meta property="og:title" content="Refrigeration & AC Sales and Service | M. Shiva Kumar">
-    <meta property="og:type" content="website">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS VARIABLES */
+        /* BASE STYLES */
         :root {
-            --primary-color: #CC0000; /* Red - For accents */
-            --secondary-color: #004C99; /* Deep Blue - Header/Footer */
+            --primary-color: #CC0000; /* Red - For accents and brands */
+            --secondary-color: #004C99; /* Deep Blue - For background/header */
             --text-color: #333333;
-            --light-bg: #F0F5F8; /* Light blue/gray for backgrounds */
+            --light-bg: #F9F9F9;
             --white: #FFFFFF;
+            --gradient-start: #e0f2f7; /* Light blue */
+            --gradient-end: #cbe9f2; /* Slightly darker blue */
         }
 
-        /* GLOBAL STYLES */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -38,15 +36,28 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        
-        /* HEADER / NAVIGATION */
-        nav {
+
+        /* HEADER AND NAVIGATION */
+        .header-top {
             background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 10px 0;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        .header-top a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
         .nav-content {
             display: flex;
@@ -57,62 +68,62 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 1.8em;
             font-weight: 800;
-            color: var(--white);
+            color: var(--primary-color);
         }
         .logo span {
-            color: var(--primary-color);
+            color: var(--secondary-color);
+            font-weight: 600;
         }
         
         .nav-links a {
             text-decoration: none;
-            color: var(--white);
-            font-weight: 400;
+            color: var(--text-color);
+            font-weight: 600;
             margin-left: 25px;
+            padding-bottom: 3px;
             transition: color 0.3s;
-            padding: 5px 0;
         }
         .nav-links a:hover {
             color: var(--primary-color);
-        }
-        .contact-number {
-            font-weight: 700;
-            border: 2px solid var(--primary-color);
-            padding: 8px 15px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        .contact-number:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
+            border-bottom: 2px solid var(--primary-color);
         }
 
-        /* HERO / BANNER SECTION (Full Width) */
+        /* HERO SECTION */
         .hero {
-            background: linear-gradient(135deg, var(--secondary-color), #00366b);
-            color: var(--white);
-            padding: 100px 0;
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            padding: 80px 0;
             text-align: center;
-            /* Placeholder for a large background image, similar to the cruiseac slider */
-            background-image: url('https://via.placeholder.com/1920x450/004C99/FFFFFF?text=Authorized+AC+and+Refrigeration+Experts'); 
-            background-size: cover;
-            background-position: center;
+            border-bottom: 5px solid var(--primary-color);
+            position: relative;
+            overflow: hidden; /* To contain background elements */
         }
-        .hero-overlay {
-            background: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
-            padding: 40px 0;
+        .hero::before { /* Subtle pattern or image behind */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://via.placeholder.com/1500x300/e0f2f7/cbe9f2?text=Subtle+Pattern'); /* Placeholder, replace with a subtle texture or AC-related pattern */
+            background-size: cover;
+            opacity: 0.1; /* Very light */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
         .hero h1 {
             font-family: 'Montserrat', sans-serif;
             font-size: 3em;
             margin-bottom: 15px;
-            font-weight: 800;
+            color: var(--secondary-color);
         }
         .hero p {
-            font-size: 1.3em;
-            margin-bottom: 40px;
-            max-width: 800px;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 700px;
             margin: 0 auto 30px;
-            font-weight: 300;
         }
         .btn-primary {
             display: inline-block;
@@ -130,316 +141,320 @@
         
         /* SECTION STYLES */
         section {
-            padding: 80px 0;
-            text-align: center;
+            padding: 60px 0;
         }
         .section-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.5em;
+            font-size: 2.2em;
             font-weight: 800;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 40px;
             color: var(--secondary-color);
         }
-        .section-subtitle {
-            font-size: 1.1em;
-            margin-bottom: 60px;
-            color: #666;
-            text-transform: uppercase;
-        }
 
-        /* FEATURED SECTIONS (Mimics homeFeatured left/right) */
-        .featured-block {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            text-align: left;
-            margin-bottom: 60px;
-            background-color: var(--light-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-        .featured-block.reverse {
-            flex-direction: row-reverse;
-            text-align: right;
-        }
-        .featured-block.reverse .content {
-            padding-left: 0;
-            padding-right: 40px;
-        }
-        .featured-block.reverse .content h3 {
-            border-right: 4px solid var(--primary-color);
-            border-left: none;
-            padding-left: 0;
-            padding-right: 15px;
-        }
-        .featured-block .image, .featured-block .content {
-            flex: 1;
-            min-width: 300px;
-        }
-        .featured-block .image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            min-height: 350px;
-        }
-        .featured-block .content {
-            padding: 40px;
-        }
-        .featured-block .content h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2em;
-            margin-bottom: 15px;
-            color: var(--secondary-color);
-            border-left: 4px solid var(--primary-color);
-            padding-left: 15px;
-        }
-        .featured-block .content p {
-            font-size: 1.1em;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        /* SERVICES GRID */
-        .services-grid {
+        /* BRANDS SECTION (Product Look) */
+        .brands-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            text-align: center;
         }
-        .service-card {
+        .brand-card {
             background-color: var(--white);
             border: 1px solid #ddd;
-            border-top: 5px solid var(--primary-color);
-            padding: 30px;
             border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
         }
-        .service-card h4 {
-            color: var(--secondary-color);
-            font-size: 1.4em;
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        .brand-logo-placeholder {
+            height: 80px;
+            line-height: 80px;
+            font-size: 2em;
+            font-weight: 800;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: transparent; /* Hide text if image is used */
+        }
+        /* Specific brand styles with placeholder images */
+        .danfoss { 
+            background-image: url('https://via.placeholder.com/200x80/CC0000/FFFFFF?text=Danfoss+Logo'); 
+            background-color: var(--primary-color);
+        }
+        .ogeneral { 
+            background-image: url('https://via.placeholder.com/200x80/FFFFFF/004C99?text=O_General+Logo'); 
+            border: 2px solid var(--secondary-color); 
+            background-color: #fff;
+        }
+        .mitsubishi { 
+            background-image: url('https://via.placeholder.com/200x80/E6E6E6/333333?text=Mitsubishi+Logo'); 
+            background-color: #e6e6e6;
+        }
+        
+        .brand-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5em;
             margin-bottom: 10px;
         }
-        .service-card img {
-            width: 70px;
-            height: 70px;
-            margin-bottom: 15px;
-            border-radius: 50%;
-            object-fit: cover;
+        .brand-card p {
+            font-size: 0.95em;
+            color: #666;
         }
 
-        /* FOOTER SECTION */
-        footer {
+        /* SERVICES SECTION */
+        .services-section {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-bg) 100%); /* Subtle gradient */
+        }
+        .services-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .service-item {
+            width: calc(50% - 10px);
+            background-color: var(--white);
+            padding: 20px;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            display: flex; /* For icon/image and text */
+            align-items: center;
+        }
+        .service-icon {
+            margin-right: 15px;
+            font-size: 2.5em; /* Placeholder for an actual icon or image */
+            color: var(--secondary-color);
+        }
+        .service-image {
+            width: 80px; /* Example size */
+            height: 80px;
+            margin-right: 15px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .service-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        
+        /* CONTACT INFO */
+        .contact-section {
             background-color: var(--secondary-color);
             color: var(--white);
-            padding: 60px 0 30px;
+            padding: 60px 0;
+            text-align: center;
         }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding-bottom: 40px;
-            margin-bottom: 30px;
+        .contact-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
         }
-        .footer-col h4 {
-            font-family: 'Montserrat', sans-serif;
+        .contact-item {
+            margin: 20px;
+            max-width: 280px;
+            text-align: left;
+        }
+        .contact-item h3 {
             color: var(--primary-color);
-            margin-bottom: 20px;
+            font-size: 1.2em;
+            margin-bottom: 10px;
         }
-        .footer-col ul {
-            list-style: none;
-            padding: 0;
-        }
-        .footer-col a {
+        .contact-item a {
             color: var(--white);
             text-decoration: none;
-            display: block;
-            padding: 5px 0;
-            font-size: 0.95em;
+            font-weight: 600;
         }
-        .footer-col a:hover {
+        .contact-item a:hover {
             text-decoration: underline;
-            color: var(--primary-color);
         }
-        .footer-bottom {
+        .address p {
+            line-height: 1.5;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--text-color);
+            color: #aaa;
             text-align: center;
-            font-size: 0.85em;
-            color: rgba(255, 255, 255, 0.7);
+            padding: 20px 0;
+            font-size: 0.8em;
         }
 
         /* MEDIA QUERIES (Responsiveness) */
-        @media (max-width: 992px) {
-            .nav-links {
-                display: none; /* Hide standard links on small screens, simplify navigation */
-            }
+        @media (max-width: 768px) {
             .nav-content {
-                justify-content: center;
+                flex-direction: column;
+            }
+            .nav-links {
+                margin-top: 15px;
+            }
+            .nav-links a {
+                margin: 0 10px;
             }
             .hero h1 {
                 font-size: 2.5em;
             }
-            .featured-block {
-                flex-direction: column;
+            .service-item {
+                width: 100%;
+            }
+            .contact-item {
                 text-align: center;
-            }
-            .featured-block.reverse {
-                flex-direction: column; /* Ensure stack order is consistent on mobile */
-                text-align: center;
-            }
-            .featured-block .content, .featured-block.reverse .content {
-                padding: 30px;
-                text-align: center;
-            }
-            .featured-block .content h3, .featured-block.reverse .content h3 {
-                border-left: 4px solid var(--primary-color);
-                border-right: none;
-                padding-left: 15px;
-                padding-right: 0;
-                display: inline-block;
-            }
-            .footer-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             }
         }
     </style>
 </head>
 <body>
 
+    <div class="header-top">
+        <div class="container">
+            Call Us Today! &nbsp; | &nbsp; 
+            <a href="tel:9666627166">9666627166</a> &nbsp; | &nbsp; 
+            <a href="mailto:shiva.kumar461@gmail.com">shiva.kumar461@gmail.com</a>
+        </div>
+    </div>
+
     <nav>
         <div class="container nav-content">
-            <a href="#home" class="logo">M. Shiva <span>Kumar</span></a>
+            <div class="logo">M. Shiva <span>Kumar</span></div>
             <div class="nav-links">
+                <a href="#brands">Brands</a>
                 <a href="#services">Services</a>
-                <a href="#featured">Brands</a>
-                <a href="#contact" class="contact-number">CALL: 96666 27166</a>
+                <a href="#contact">Contact</a>
+                <a href="tel:9666627166" class="btn-primary" style="background-color: var(--secondary-color); margin-left: 30px;">CALL NOW</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero" id="home">
-        <div class="hero-overlay">
-            <div class="container">
-                <h1>REFRIGERATION & AC SALES AND SERVICE</h1>
-                <p>Authorized Partner for Danfoss, OGENERAL, and MITSUBISHI Heavy Industries. Your Nalgonda experts for superior cooling technology and reliable maintenance.</p>
-                <a href="#contact" class="btn-primary">GET FREE CONSULTATION TODAY</a>
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Specialists in Refrigeration & Air Conditioning</h1>
+            <p>Your authorized partner for sales, installation, and expert maintenance of Danfoss, OGENERAL, and MITSUBISHI systems in Nalgonda.</p>
+            <a href="#contact" class="btn-primary">Get a Service Quote</a>
+        </div>
+    </section>
+    
+    <hr>
+
+    <section id="brands" class="brands-section">
+        <div class="container">
+            <h2 class="section-title">Authorized Sales & Service Partners</h2>
+            <div class="brands-grid">
+                
+                <div class="brand-card">
+                    <div class="brand-logo-placeholder danfoss">Danfoss</div>
+                    <h3>Refrigeration Solutions</h3>
+                    <p>Sales and comprehensive service for all Danfoss refrigeration and air conditioning components.</p>
+                    <a href="#contact" style="color: var(--primary-color); text-decoration: none; font-weight: 600; margin-top: 10px; display: block;">View Details →</a>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-logo-placeholder ogeneral">OGeneral</div>
+                    <h3>Premium AC Sales</h3>
+                    <p>Expert installation and maintenance for OGENERAL air conditioners, ensuring peak performance.</p>
+                    <a href="#contact" style="color: var(--primary-color); text-decoration: none; font-weight: 600; margin-top: 10px; display: block;">View Details →</a>
+                </div>
+
+                <div class="brand-card">
+                    <div class="brand-logo-placeholder mitsubishi">MITSUBISHI HEAVY INDUSTRIES LTD.</div>
+                    <h3>Heavy Duty Systems</h3>
+                    <p>Specialized service for MITSUBISHI VRV, VRF, and Ductable Centralised Systems.</p>
+                    <a href="#contact" style="color: var(--primary-color); text-decoration: none; font-weight: 600; margin-top: 10px; display: block;">View Details →</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="featured">
+    <hr>
+
+    <section id="services" class="services-section">
         <div class="container">
-            <h2 class="section-title">AUTHORIZED BRAND SOLUTIONS</h2>
-            <p class="section-subtitle">Genuine products and expert support for top industry names.</p>
+            <h2 class="section-title">Our Expert Technical Services</h2>
+            <div class="services-list">
+                
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/80x80?text=AC+Types" alt="AC unit types" class="service-image">
+                    <div>
+                        <h4>All AC and Refrigeration Types</h4>
+                        <p>Installation and servicing for all residential, commercial, and industrial cooling units.</p>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/80x80?text=VRV+VRF" alt="VRV VRF system" class="service-image">
+                    <div>
+                        <h4>VRV / VRF Systems</h4>
+                        <p>Specialists in Variable Refrigerant Volume/Flow (VRV/VRF) system setup and repairs.</p>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/80x80?text=Ductable" alt="Ductable AC system" class="service-image">
+                    <div>
+                        <h4>Ductable Centralised Systems</h4>
+                        <p>Comprehensive solutions for large-scale ductable and centralised cooling projects.</p>
+                    </div>
+                </div>
 
-            <div class="featured-block">
-                <div class="image">
-                    <img src="https://via.placeholder.com/600x400/004C99/FFFFFF?text=OGeneral+AC+Unit" alt="OGeneral Split AC Unit">
-                </div>
-                <div class="content">
-                    <h3>OGENERAL PREMIUM AC SYSTEMS</h3>
-                    <p>We provide complete sales, seamless installation, and expert maintenance for all OGENERAL split and commercial air conditioners. Ensure maximum energy efficiency and cooling comfort with genuine parts.</p>
-                    <a href="#contact" class="btn-primary">Inquire About OGENERAL Sales</a>
-                </div>
-            </div>
-
-            <div class="featured-block reverse">
-                <div class="image">
-                    <img src="https://via.placeholder.com/600x400/CC0000/FFFFFF?text=Mitsubishi+VRV+System" alt="MITSUBISHI VRF/VRV Unit">
-                </div>
-                <div class="content">
-                    <h3>MITSUBISHI VRV & CENTRALIZED SYSTEMS</h3>
-                    <p>Specialized servicing and setup for complex MITSUBISHI HEAVY INDUSTRIES LTD. VRV, VRF, and Ducted Centralized systems. Trust our technical skill for large-scale, heavy-duty cooling solutions.</p>
-                    <a href="#services" class="btn-primary">Explore Commercial Services</a>
+                <div class="service-item">
+                    <img src="https://via.placeholder.com/80x80?text=Maintenance" alt="AC maintenance" class="service-image">
+                    <div>
+                        <h4>Installation & Maintenance</h4>
+                        <p>Complete installation services and AMC (Annual Maintenance Contracts) for long-term reliability.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" style="background-color: var(--light-bg);">
+    <hr>
+
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">OUR CORE EXPERTISE</h2>
-            <p class="section-subtitle">Comprehensive solutions for all your cooling and refrigeration needs.</p>
-
-            <div class="services-grid">
-                
-                <div class="service-card">
-                    <img src="https://via.placeholder.com/70/004C99/FFFFFF?text=AC" alt="AC Icon">
-                    <h4>All AC Types Sales & Service</h4>
-                    <p>We handle all brands and types of Air Conditioners for residential and commercial use.</p>
-                </div>
-                
-                <div class="service-card">
-                    <img src="https://via.placeholder.com/70/CC0000/FFFFFF?text=VRF" alt="VRF Icon">
-                    <h4>VRV / VRF Systems</h4>
-                    <p>Expert installation, diagnostics, and repair for Variable Refrigerant Flow systems.</p>
-                </div>
-
-                <div class="service-card">
-                    <img src="https://via.placeholder.com/70/004C99/FFFFFF?text=DUCT" alt="Duct Icon">
-                    <h4>Ducted Centralized AC</h4>
-                    <p>Maintenance and repair for large-scale, hidden ductable air conditioning setups.</p>
-                </div>
-                
-                <div class="service-card">
-                    <img src="https://via.placeholder.com/70/CC0000/FFFFFF?text=REFRIG" alt="Refrigeration Icon">
-                    <h4>Danfoss Refrigeration</h4>
-                    <p>Specialized service and parts for Danfoss refrigeration components and units.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><a href="tel:+919666627166">Mobile 1: 96666 27166</a></li>
-                        <li><a href="tel:+919676554055">Mobile 2: 96765 54055</a></li>
-                        <li><a href="mailto:shiva.kumar461@gmail.com">Email: shiva.kumar461@gmail.com</a></li>
-                        <li>GST No. 36DGVP M2869H1ZL</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="#services">Split AC Installation</a></li>
-                        <li><a href="#services">VRV/VRF Repair</a></li>
-                        <li><a href="#services">Centralized AC Maintenance</a></li>
-                        <li><a href="#featured">Brand Sales Support</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Service Location</h4>
-                    <p style="line-height: 1.5; color: var(--white);">
-                        H.No. 6-6-272,<br>
-                        Vivekananda Nagar,<br>
-                        Hyderabad Road, Nalgonda-508 001.
-                    </p>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Social & Trust</h4>
-                    <p style="font-size: 0.9em; margin-top: 10px;">
-                        Trust built on 10+ years of cooling expertise in Nalgonda.
-                    </p>
-                    <p style="margin-top: 15px;">
-                         <a href="#" style="display: inline; margin-right: 15px;">Facebook</a>
-                         <a href="#" style="display: inline;">LinkedIn</a>
-                    </p>
-                </div>
-            </div>
+            <h2 class="section-title" style="color: var(--white);">Contact M. Shiva Kumar</h2>
+            <p>Reach out to us for genuine products, professional service, and expert consultation.</p>
             
-            <div class="footer-bottom">
-                &copy; 2025 M. Shiva Kumar - Refrigeration & AC Sales and Service. All rights reserved.
+            <div class="contact-grid">
+                
+                <div class="contact-item">
+                    <h3>Primary Contact</h3>
+                    <p>M. Shiva Kumar</p>
+                    <p>Email: <a href="mailto:shiva.kumar461@gmail.com">shiva.kumar461@gmail.com</a></p>
+                    <p>GST No. 36DGVP M2869H1ZL</p>
+                </div>
+
+                <div class="contact-item">
+                    <h3>Call Us Anytime</h3>
+                    <p>Mobile 1: <a href="tel:+919666627166">9666627166</a></p>
+                    <p>Mobile 2: <a href="tel:+919676554055">9676554055</a></p>
+                </div>
+
+                <div class="contact-item address">
+                    <h3>Service Location</h3>
+                    <p>H.No. 6-6-272, Vivekananda Nagar,</p>
+                    <p>Hyderabad Road, Nalgonda-508 001.</p>
+                </div>
+
             </div>
         </div>
+    </section>
+
+    <footer>
+        &copy; 2025 M. Shiva Kumar - Refrigeration & AC Sales and Service. All rights reserved.
     </footer>
 
 </body>
