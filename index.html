@@ -1,226 +1,79 @@
-import React from "react";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haytiss Refrigeration & Air Conditioning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {margin:0;font-family:'Inter',sans-serif;background:linear-gradient(to bottom,#ffffff,#f3f4f6);color:#1f2937;}
+    header {display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.05);} 
+    .logo {display:flex;align-items:center;gap:10px;}
+    .logo span {background:#e11d48;color:white;font-weight:bold;font-size:24px;padding:10px 16px;border-radius:10px;}
+    .nav a {margin:0 10px;text-decoration:none;color:#1f2937;font-weight:600;}
+    .hero {display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:60px 40px;max-width:1200px;margin:auto;}
+    .hero-text {max-width:550px;}
+    .hero-text h1 {font-size:36px;margin-bottom:10px;}
+    .hero-text p {color:#4b5563;line-height:1.6;}
+    .cta {margin-top:20px;}
+    .cta a {text-decoration:none;background:#e11d48;color:white;padding:12px 20px;border-radius:8px;font-weight:600;margin-right:10px;}
+    .services, .contact, footer {max-width:1200px;margin:auto;padding:40px;}
+    .services h2, .contact h2 {font-size:28px;margin-bottom:20px;}
+    .service-list {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+    .service-item {background:white;padding:20px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.05);}
+    .contact-info {background:white;border-radius:12px;padding:30px;box-shadow:0 4px 15px rgba(0,0,0,0.05);}
+    .contact-info p {margin:8px 0;}
+    footer {text-align:center;color:#6b7280;font-size:14px;border-top:1px solid #e5e7eb;margin-top:40px;}
+    @media(max-width:700px){.hero{flex-direction:column;}.hero img{margin-top:20px;}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><span>H</span> <strong>Haytiss</strong></div>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-// Single-file React component (Tailwind CSS required in the app)
-// Default export a full-page professional landing page for the visiting card details.
-
-export default function HaytssLanding() {
-  const company = {
-    name: "Haytss Refrigeration & Air Conditioning",
-    tagline: "Refrigeration & Air Conditioner Sales · Installation · Service",
-    services: [
-      "Sales of Refrigeration & Air Conditioners",
-      "Installation & Maintenance",
-      "VRV / VRF Systems",
-      "Ductable Centralised Systems",
-      "Commercial & Industrial Servicing",
-    ],
-    brands: ["GENERAL", "MITSUBISHI HEAVY INDUSTRIES"],
-    contactName: "M. Shiva Kumar",
-    phones: ["9666627166", "9676564055"],
-    email: "shiva.kumar4461@gmail.com",
-    gst: "36DGVPM2869H1ZL",
-    address: "H.No. 6-6-272, Vivekananda Nagar, Hyderabad Road, Nalgonda - 508001, Telangana, India",
-  };
-
-  function downloadVCard() {
-    const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:${company.contactName}\nORG:${company.name}\nTEL;TYPE=WORK,VOICE:${company.phones[0]}\nTEL;TYPE=CELL:${company.phones[1]}\nEMAIL:${company.email}\nADR;TYPE=WORK:;;${company.address};;;;\nNOTE:${company.tagline} | GST: ${company.gst}\nEND:VCARD`;
-    const blob = new Blob([vcard], { type: "text/vcard" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "haytss.vcf";
-    a.click();
-    URL.revokeObjectURL(url);
-  }
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-800">
-      <header className="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <div className="w-16 h-16 rounded-lg shadow-lg bg-gradient-to-br from-rose-300 to-rose-600 flex items-center justify-center">
-            <span className="font-bold text-white tracking-wider text-lg">H</span>
-          </div>
-          <div>
-            <h1 className="text-2xl font-semibold">{company.name}</h1>
-            <p className="text-sm text-slate-600">{company.tagline}</p>
-          </div>
-        </div>
-
-        <nav className="hidden md:flex items-center gap-6 text-sm">
-          <a href="#services" className="hover:underline">Services</a>
-          <a href="#about" className="hover:underline">About</a>
-          <a href="#contact" className="hover:underline">Contact</a>
-          <button
-            onClick={downloadVCard}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-rose-600 text-white shadow hover:bg-rose-700"
-          >
-            Download vCard
-          </button>
-        </nav>
-      </header>
-
-      <main className="max-w-6xl mx-auto px-6">
-        <section className="grid md:grid-cols-2 gap-8 items-center mt-6">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-extrabold leading-tight">
-              Trusted Commercial & Residential HVAC Partner
-            </h2>
-            <p className="mt-4 text-slate-600">
-              We provide end-to-end refrigeration and air conditioning solutions — from sales of premium brands
-              to expert installation and long-term maintenance. Servicing homes, retail, and industrial clients with
-              transparent pricing and reliable support.
-            </p>
-
-            <div className="mt-6 flex gap-3">
-              <a
-                href="#contact"
-                className="px-5 py-3 rounded-md bg-rose-600 text-white font-medium shadow hover:bg-rose-700"
-              >
-                Request Site Visit
-              </a>
-              <a
-                href={`mailto:${company.email}`}
-                className="px-5 py-3 rounded-md border border-slate-200 text-slate-700 font-medium hover:bg-slate-50"
-              >
-                Email Us
-              </a>
-            </div>
-
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
-              {company.brands.map((b) => (
-                <div key={b} className="p-3 bg-white rounded-lg shadow-sm text-center text-xs font-semibold">
-                  {b}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.aside
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="bg-white rounded-2xl shadow p-6"
-          >
-            <div className="flex items-start gap-4">
-              <div className="w-20 h-20 rounded-lg bg-gradient-to-br from-rose-200 to-rose-400 flex items-center justify-center text-white font-bold text-2xl">
-                H
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold">{company.name}</h3>
-                <p className="text-sm text-slate-500">{company.tagline}</p>
-                <p className="mt-3 text-sm text-slate-600">GST: <span className="font-medium">{company.gst}</span></p>
-              </div>
-            </div>
-
-            <div className="mt-6 border-t pt-4 text-sm text-slate-700">
-              <p className="flex items-center gap-2"><strong>Contact:</strong> {company.contactName}</p>
-              <p className="mt-2"><strong>Phone:</strong> {company.phones.join(" / ")}</p>
-              <p className="mt-2"><strong>Email:</strong> <a href={`mailto:${company.email}`} className="text-rose-600">{company.email}</a></p>
-              <p className="mt-2"><strong>Address:</strong> {company.address}</p>
-            </div>
-
-            <div className="mt-6 flex gap-3">
-              <button onClick={downloadVCard} className="flex-1 px-4 py-2 rounded-md bg-rose-600 text-white">Download vCard</button>
-              <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(company.address)}`} target="_blank" rel="noreferrer" className="flex-1 px-4 py-2 rounded-md border text-slate-700 text-center">Open Map</a>
-            </div>
-          </motion.aside>
-        </section>
-
-        <section id="services" className="mt-12 grid md:grid-cols-3 gap-6">
-          <div className="md:col-span-2 bg-white rounded-2xl p-6 shadow">
-            <h3 className="text-2xl font-semibold">Our Services</h3>
-            <p className="mt-2 text-slate-600">Comprehensive HVAC solutions for small to large projects.</p>
-
-            <ul className="mt-6 grid sm:grid-cols-2 gap-4">
-              {company.services.map((s) => (
-                <li key={s} className="p-4 rounded-lg border border-slate-100 bg-slate-50">
-                  <div className="font-medium">{s}</div>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-6 text-sm text-slate-600">
-              <strong>Quality promise:</strong> Certified technicians · Genuine spares · Transparent quotes · Safety compliant installations
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl p-6 shadow">
-            <h4 className="text-lg font-semibold">Quick Contact</h4>
-            <p className="mt-2 text-sm text-slate-600">Reach out and we'll get back within one business day.</p>
-
-            <form className="mt-4 flex flex-col gap-3" onSubmit={(e) => { e.preventDefault(); alert('Request sent — (demo)'); }}>
-              <input name="name" placeholder="Your name" className="px-3 py-2 rounded border" />
-              <input name="phone" placeholder="Phone or WhatsApp" className="px-3 py-2 rounded border" />
-              <input name="email" placeholder="Email" className="px-3 py-2 rounded border" />
-              <textarea name="message" placeholder="Brief message" className="px-3 py-2 rounded border h-24"></textarea>
-              <button type="submit" className="px-4 py-2 rounded bg-rose-600 text-white font-medium">Send Request</button>
-            </form>
-
-            <div className="mt-4 text-sm text-slate-600">
-              <div><strong>Phone:</strong> {company.phones[0]}</div>
-              <div className="mt-1"><strong>Email:</strong> {company.email}</div>
-            </div>
-          </div>
-        </section>
-
-        <section id="about" className="mt-12 bg-white rounded-2xl p-6 shadow">
-          <h3 className="text-2xl font-semibold">About {company.name.split(' ')[0]}</h3>
-          <p className="mt-3 text-slate-600">With years of experience in refrigeration and air conditioning, we focus on delivering solutions that match client requirements — from energy-efficient systems for retail and offices to powerful chillers for industrial use. Our technicians are trained for safe, code-compliant installations and preventive maintenance programs.</p>
-
-          <div className="mt-6 grid md:grid-cols-2 gap-4">
-            <div>
-              <h5 className="font-semibold">Why choose us</h5>
-              <ul className="mt-2 text-slate-600 list-disc list-inside">
-                <li>Authorized dealers for trusted brands</li>
-                <li>Transparent service agreements</li>
-                <li>Emergency call-out support</li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="font-semibold">Certifications</h5>
-              <p className="mt-2 text-slate-600">Trained technicians · Manufacturer-authorized servicing · Workplace safety compliant</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="mt-12 grid md:grid-cols-2 gap-6 items-start">
-          <div className="bg-white rounded-2xl p-6 shadow">
-            <h3 className="text-2xl font-semibold">Get in touch</h3>
-            <p className="mt-2 text-slate-600">Request a quote, schedule a site visit, or ask about spare parts.</p>
-
-            <div className="mt-4 text-sm text-slate-700">
-              <div className="mb-3"><strong>Contact:</strong> {company.contactName}</div>
-              <div className="mb-3"><strong>Phone:</strong> {company.phones.join(' / ')}</div>
-              <div className="mb-3"><strong>Email:</strong> <a href={`mailto:${company.email}`} className="text-rose-600">{company.email}</a></div>
-              <div className="mb-3"><strong>Address:</strong> {company.address}</div>
-              <div className="mb-1"><strong>GST:</strong> {company.gst}</div>
-            </div>
-
-            <div className="mt-4 flex gap-3">
-              <a className="px-4 py-2 rounded bg-rose-600 text-white" href={`tel:${company.phones[0]}`}>Call {company.phones[0]}</a>
-              <a className="px-4 py-2 rounded border" href={`https://wa.me/${company.phones[0]}`}>WhatsApp</a>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl p-0 overflow-hidden shadow">
-            <iframe
-              title="Office location"
-              src={`https://www.google.com/maps?q=${encodeURIComponent(company.address)}&output=embed`}
-              className="w-full h-80 border-0"
-            />
-          </div>
-        </section>
-
-        <footer className="mt-12 py-8 text-center text-sm text-slate-600">
-          © {new Date().getFullYear()} {company.name} · All rights reserved · GST: {company.gst}
-        </footer>
-      </main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Haytiss Refrigeration & Air Conditioning</h1>
+      <p>Providing reliable refrigeration and air conditioning solutions — Sales, Installation, and Maintenance for all leading brands including <strong>General</strong> and <strong>Mitsubishi Heavy Industries</strong>.</p>
+      <div class="cta">
+        <a href="tel:+919666627166">Call Now</a>
+        <a href="mailto:shiva.kumar4461@gmail.com">Email Us</a>
+      </div>
     </div>
-  );
-}
+    <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/air-conditioner-1958655_960_720.jpg" alt="AC service" style="width:420px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.1);">
+  </section>
+
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service-item"><h3>AC Sales & Installation</h3><p>Expert installation of air conditioners and refrigeration units for homes and businesses.</p></div>
+      <div class="service-item"><h3>VRV / VRF Systems</h3><p>Energy-efficient centralised air conditioning for large projects and offices.</p></div>
+      <div class="service-item"><h3>Maintenance & Repairs</h3><p>Professional maintenance and genuine spare part replacement with warranty support.</p></div>
+      <div class="service-item"><h3>Commercial Refrigeration</h3><p>Solutions for cold storage, display units, and industrial chillers.</p></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Contact Person:</strong> M. Shiva Kumar</p>
+      <p><strong>Phone:</strong> <a href="tel:+919666627166">+91 96666 27166</a>, <a href="tel:+919676564055">+91 96765 64055</a></p>
+      <p><strong>Email:</strong> <a href="mailto:shiva.kumar4461@gmail.com">shiva.kumar4461@gmail.com</a></p>
+      <p><strong>GST No:</strong> 36DGVPM2869H1ZL</p>
+      <p><strong>Address:</strong> H.No: 6-6-272, Vivekananda Nagar, Hyderabad Road, Nalgonda - 508001</p>
+      <div class="cta" style="margin-top:15px;">
+        <a href="https://www.google.com/maps/search/?api=1&query=6-6-272+Vivekananda+Nagar+Nalgonda" target="_blank">View on Map</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Haytiss Refrigeration & Air Conditioning — All Rights Reserved | GST: 36DGVPM2869H1ZL
+  </footer>
+</body>
+</html>
