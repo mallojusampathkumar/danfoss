@@ -1,52 +1,99 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Danfoss — Home</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--c1:#e11d48;--c2:#3b82f6;--c3:#06b6d4;--muted:#6b7280;--maxW:1150px;}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui;background:linear-gradient(180deg,#f7fbff,#f2f6fb);color:#071026}
-.wrap{max-width:var(--maxW);margin:28px auto;padding:18px}
-header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-radius:14px;background:linear-gradient(90deg,#fff,rgba(255,255,255,0.9));box-shadow:0 8px 30px rgba(2,6,23,0.06)}
-.brand{display:flex;align-items:center;gap:12px}.brand img{height:56px}
-nav a{color:#071026;text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
-nav a:hover{background:linear-gradient(90deg,var(--c2),var(--c3));color:#fff}
-.hero{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:18px;align-items:start}
-.card{background:#fff;border-radius:16px;padding:22px;box-shadow:0 16px 40px rgba(2,6,23,0.06)}
-.btn{padding:10px 14px;border-radius:12px;font-weight:700;text-decoration:none;display:inline-block;cursor:pointer}
-.btn-primary{background:linear-gradient(90deg,var(--c1),#ff7b6b);color:white}
-.btn-ghost{background:white;border:1px solid #eef2f6;color:#071018}
-img.small{width:100%;border-radius:12px;margin-top:10px}
-footer{text-align:center;color:var(--muted);font-size:13px;margin-top:22px;padding:18px}
-@media(max-width:900px){.hero{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Danfoss — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --c1:#e11d48; /* red */
+      --c2:#3b82f6; /* blue */
+      --c3:#06b6d4; /* teal */
+      --muted:#6b7280;
+      --maxW:1150px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Roboto,Arial;background:#f7fbff;color:#071026;overflow-x:hidden}
+    .wrap{max-width:var(--maxW);margin:0 auto;padding:18px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;position:relative;z-index:10;background:rgba(255,255,255,0.85);border-radius:0 0 14px 14px;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:56px}
+    nav a{color:#071026;text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
+    nav a:hover{background:linear-gradient(90deg,var(--c2),var(--c3));color:#fff}
+    .video-hero{position:relative;height:70vh;min-height:400px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:white;text-align:center}
+    .video-hero video{position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%);z-index:1}
+    .video-hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:2}
+    .video-hero .content{position:relative;z-index:3;padding:0 20px;max-width:720px}
+    .video-hero h1{font-size:3rem;line-height:1.1;margin:0;color:#fff}
+    .video-hero h1 .accent{background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .video-hero p{margin-top:14px;color:rgba(255,255,255,0.9);font-size:1.1rem}
+    .video-hero .btn{margin-top:20px;padding:12px 18px;font-size:1rem;border-radius:10px;font-weight:700;text-decoration:none;background:linear-gradient(90deg,var(--c1),#ff7b6b);color:#fff}
+    .section{padding:60px 18px}
+    .services-preview .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+    .service-card{background:#fff;border-radius:12px;padding:22px;box-shadow:0 12px 30px rgba(2,6,23,0.04);transition:transform .18s}
+    .service-card:hover{transform:translateY(-8px)}
+    .service-card img{width:100%;border-radius:10px;margin-bottom:12px}
+    .service-card h3{margin:0 0 8px}
+    footer{text-align:center;color:var(--muted);font-size:13px;padding:28px}
+    @media(max-width:720px){.video-hero h1{font-size:2.2rem}}
+  </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <div class="brand"><img src="logo.png" alt="Danfoss logo"><div><h2 style="margin:0">Danfoss</h2><div style="color:var(--muted);font-size:13px">Refrigeration and Air Conditioners — Sales & Service</div></div></div>
-  <nav><a href="index.html">Home</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav>
-</header>
 
-<main class="hero">
-  <section class="card">
-    <h2 style="margin:0 0 10px;color:var(--c1)">Refrigeration & Air Conditioning</h2>
-    <p style="color:var(--muted)">Sales, installation and maintenance of refrigeration & AC systems: VRV / VRF, ductable & centralized systems, commercial chillers, and preventive servicing.</p>
-    <img class="small" src="https://images.unsplash.com/photo-1607860108855-3aa4b3e8efef?auto=format&fit=crop&w=800&q=60" alt="AC technician">
-    <div style="margin-top:14px"><a class="btn btn-primary" href="tel:+919666627166">Call Now</a> <a class="btn btn-ghost" href="contact.html">Request Quote</a></div>
+  <header>
+    <div class="brand">
+      <img src="logo.png" alt="Danfoss logo">
+      <div>
+        <h2 style="margin:0">Danfoss</h2>
+        <div style="color:var(--muted);font-size:13px">Refrigeration and Air Conditioners — Sales & Service</div>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="video-hero">
+    <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1603126858267-8b37e32d4c4e?auto=format&fit=crop&w=1600&q=60">
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="content">
+      <h1><span class="accent">Danfoss</span> Cooling Solutions</h1>
+      <p>We deliver top-tier refrigeration & air conditioning systems — sales, installation and service under one roof.</p>
+      <a class="btn" href="contact.html">Request a Quote</a>
+    </div>
   </section>
-  <aside class="card">
-    <h4>Quick Info</h4>
-    <p style="color:var(--muted)">Authorized service center for Danfoss. Partnered with GENERAL and Mitsubishi Heavy Industries.</p>
-    <img class="small" src="https://images.unsplash.com/photo-1603126858267-8b37e32d4c4e?auto=format&fit=crop&w=800&q=60" alt="Cooling system">
-    <p style="margin-top:8px;font-size:14px;color:var(--muted)"><strong>Contact:</strong> M. Shiva Kumar<br>Phones: +91 96666 27166 / +91 96765 64055<br>Email: shiva.kumar4461@gmail.com</p>
-  </aside>
-</main>
 
-<footer>© <strong>Danfoss</strong> — Refrigeration & Air Conditioning • GST: 36DGVPM2869H1ZL</footer>
-</div>
+  <section class="section services-preview">
+    <div class="wrap">
+      <h2 style="text-align:center;margin-bottom:40px">Our Core Services</h2>
+      <div class="grid">
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1581091870632-1e7ab8e7bba0?auto=format&fit=crop&w=600&q=60" alt="AC install">
+          <h3>AC Sales & Installation</h3>
+          <p>Residential & commercial units – end to end supply and install with warranty.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1581092783323-6b401d94d1da?auto=format&fit=crop&w=600&q=60" alt="VRF">
+          <h3>VRV / VRF Systems</h3>
+          <p>Design, supply and install high-performance multi-split systems for buildings.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1601972599720-bd6f6a0b90f3?auto=format&fit=crop&w=600&q=60" alt="Refrigeration">
+          <h3>Commercial Refrigeration</h3>
+          <p>Cold storage, display units and industrial chillers for retail & industrial clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <strong>Danfoss</strong> — Refrigeration & Air Conditioning • GST: 36DGVPM2869H1ZL
+  </footer>
+
 </body>
 </html>
-
