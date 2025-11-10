@@ -3,250 +3,75 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Danfoss — Refrigeration & Air Conditioning</title>
-  <meta name="description" content="Danfoss - Refrigeration & Air Conditioners. Sales • Installation • Service. Contact: M. Shiva Kumar. GST: 36DGVPM2869H1ZL." />
+  <title>Danfoss — Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --danfoss:#e11d48;
-      --danfoss-2:#d9302f;
-      --muted:#6b7280;
-      --bg:#f5f7fb;
-      --card:#ffffff;
-      --radius:14px;
-      --maxW:1150px;
+      --c1:#e11d48;--c2:#3b82f6;--c3:#06b6d4;
+      --muted:#6b7280;--maxW:1150px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
-      background:linear-gradient(180deg,#fbfdff 0%, #f2f6fb 100%);
-      color:#071026;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-    .container{max-width:var(--maxW);margin:28px auto;padding:20px;}
-    header{
-      display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px;
-      background:linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,250,250,0.9));
-      border-radius:16px;box-shadow:0 12px 40px rgba(17,24,39,0.06);backdrop-filter:blur(6px);
-      transition:transform .35s ease;
-    }
-    header:hover{transform:translateY(-3px)}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo-badge{
-      width:88px;height:88px;border-radius:14px;display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(135deg,var(--danfoss),var(--danfoss-2));color:white;font-weight:900;font-size:34px;
-      box-shadow:0 12px 30px rgba(209,38,53,0.18);
-    }
-    .company-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700}
-    .tagline{color:var(--muted);font-weight:600;font-size:13px}
-    nav.logos{display:flex;gap:12px;align-items:center}
-    nav.logos img{height:36px;display:block;filter:grayscale(0.03);opacity:0.95}
-    main.hero{
-      margin-top:18px;display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start;
-    }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,1), rgba(255,250,250,1));
-      border-radius:16px;padding:26px;box-shadow:0 18px 40px rgba(2,6,23,0.06);
-      border:1px solid rgba(230,234,240,0.8);
-    }
-    .headline{font-weight:700;font-size:18px;color:#061021}
-    .person{font-weight:900;color:var(--danfoss);font-size:24px;margin:8px 0}
-    .role{color:var(--muted);font-weight:700;font-size:13px}
-    .contacts{margin-top:14px;display:flex;flex-direction:column;gap:10px}
-    .contacts a{display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;text-decoration:none;color:#071018;background:linear-gradient(90deg,rgba(9,29,25,0.03),transparent);transition:transform .15s ease}
-    .contacts a:hover{transform:translateX(6px)}
-    .services{margin-top:18px}
-    .services ul{margin:10px 0 0 18px;color:#111}
-    .meta{font-size:13px;color:var(--muted);margin-top:12px;border-top:1px dashed #eef2f6;padding-top:12px}
-    .cta{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-    .btn{padding:11px 16px;border-radius:12px;font-weight:800;text-decoration:none;display:inline-block;border:0;cursor:pointer}
-    .btn-primary{background:linear-gradient(90deg,var(--danfoss),var(--danfoss-2));color:white;box-shadow:0 10px 30px rgba(209,38,53,0.16)}
+    body{margin:0;font-family:Inter,system-ui,Roboto,Arial;background:linear-gradient(180deg,#f7fbff 0%,#f2f6fb 100%);color:#071026}
+    .wrap{max-width:var(--maxW);margin:28px auto;padding:18px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-radius:14px;background:linear-gradient(90deg,#fff,rgba(255,255,255,0.9));box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:56px}
+    .brand h1{margin:0;font-family:'Playfair Display',serif;font-size:22px}
+    nav a{color:#071026;text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
+    nav a:hover{background:linear-gradient(90deg,var(--c2),var(--c3));color:white}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:18px;align-items:start}
+    .card{background:#fff;border-radius:16px;padding:22px;box-shadow:0 16px 40px rgba(2,6,23,0.06);border:1px solid rgba(230,234,240,0.9)}
+    .hero-left h2{font-size:28px;margin:0 0 8px}
+    .accent{background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:900}
+    .lead{color:var(--muted);margin-top:8px}
+    .actions{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{padding:10px 14px;border-radius:12px;font-weight:800;text-decoration:none;display:inline-block;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--c1),#ff7b6b);color:white}
     .btn-ghost{background:white;border:1px solid #eef2f6;color:#071018}
-    .right{width:360px}
-    .panel{background:linear-gradient(180deg,#fff,#fffaf8);border-radius:12px;padding:18px;box-shadow:0 8px 22px rgba(2,6,23,0.04)}
-    .panel h4{margin:0 0 8px}
-    .panel p{margin:0;color:var(--muted);font-size:14px}
-    .panel .meta-row{margin-top:12px;font-size:13px;color:var(--muted)}
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
-    .feature{background:#fff;border-radius:12px;padding:16px;box-shadow:0 8px 30px rgba(15,23,42,0.04);transition:transform .18s ease}
-    .feature:hover{transform:translateY(-6px)}
-    form#quote{margin-top:18px;background:linear-gradient(180deg,#fff,#fbfdff);border-radius:12px;padding:16px;box-shadow:0 10px 34px rgba(2,6,23,0.04)}
-    form input, form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #eef2f6;margin-top:8px;font-size:14px}
-    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px;padding:20px}
-    .brands{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:8px}
-    .brand-chip{display:inline-flex;gap:8px;align-items:center;padding:8px 10px;border-radius:10px;background:white;border:1px solid #f1f5f9}
-    .map{width:100%;height:220px;border-radius:12px;border:0;margin-top:10px}
-    /* small */
-    @media(max-width:1000px){
-      main.hero{grid-template-columns:1fr}
-      .right{width:100%}
-      .features{grid-template-columns:1fr}
-    }
+    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px;padding:18px}
+    @media(max-width:980px){.hero{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Header -->
+  <div class="wrap">
     <header>
       <div class="brand">
-        <div class="logo-badge" aria-hidden>D</div>
+        <img src="logo.png" alt="Danfoss logo">
         <div>
-          <div class="company-name">Danfoss</div>
-          <div class="tagline">Refrigeration and Air Conditioners — Sales & Service</div>
+          <h1>Danfoss</h1>
+          <div style="color:var(--muted);font-weight:700;font-size:13px">Refrigeration and Air Conditioners — Sales & Service</div>
         </div>
       </div>
-
-      <nav class="logos" aria-label="Main brand">
-        <!-- Danfoss official logo (public) -->
-        <img src="logo.png" alt="Danfoss Logo" style="height:80px; border-radius:12px;">
-
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </header>
 
-    <!-- Hero / main card -->
-    <main class="hero" aria-labelledby="companyTitle">
-      <section class="card" id="companyTitle">
-        <div class="headline">Refrigeration & Air Conditioners — Sales and Service</div>
-        <div class="person">M. Shiva Kumar</div>
-        <div class="role">Owner / Service Head</div>
-
-        <div class="contacts" aria-label="Contact information">
-          <a href="tel:+919666627166"><strong>Call</strong> +91 96666 27166</a>
-          <a href="tel:+919676564055"><strong>Call</strong> +91 96765 64055</a>
-          <a href="mailto:shiva.kumar4461@gmail.com"><strong>Email</strong> shiva.kumar4461@gmail.com</a>
-        </div>
-
-        <div class="services" aria-labelledby="servicesTitle">
-          <h3 id="servicesTitle" style="margin:14px 0 6px">Services</h3>
-          <ul>
-            <li>All type of Refrigeration and Air Conditioners</li>
-            <li>VRV / VRF systems, Ductable & Centralised Systems</li>
-            <li>Installation, Maintenance & Repair</li>
-            <li>Commercial & Industrial Refrigeration Solutions</li>
-          </ul>
-        </div>
-
-        <div class="meta" aria-hidden>
-          <div><strong>Brands carried:</strong> Danfoss · GENERAL · Mitsubishi Heavy Industries Ltd.</div>
-          <div style="margin-top:6px"><strong>GST No:</strong> 36DGVPM2869H1ZL</div>
-          <div style="margin-top:6px"><strong>Address:</strong> H.No: 6-6-272, Vivekananda Nagar, Hyderabad Road, Nalgonda — 508001</div>
-        </div>
-
-        <div class="cta" role="group" aria-label="Quick actions">
+    <main class="hero">
+      <section class="card hero-left">
+        <h2><span class="accent">Danfoss</span> — Refrigeration & Air Conditioning</h2>
+        <p class="lead">Sales, installation and maintenance of refrigeration & air conditioning systems. VRV / VRF, ductable & centralized systems, commercial chillers and preventive servicing.</p>
+        <div class="actions">
           <a class="btn btn-primary" href="tel:+919666627166">Call Now</a>
-          <a class="btn btn-ghost" href="mailto:shiva.kumar4461@gmail.com">Email</a>
-          <a class="btn btn-ghost" id="downloadVcardBtn" href="#">Download vCard</a>
+          <a class="btn btn-ghost" href="contact.html">Request Quote</a>
         </div>
-
-        <form id="quote" onsubmit="event.preventDefault(); alert('Quote request submitted — we will contact you. (Demo)');">
-          <strong style="font-size:15px">Request a Quote</strong>
-          <input name="name" placeholder="Your name" required>
-          <input name="phone" placeholder="Phone or WhatsApp" required>
-          <input name="email" placeholder="Email" type="email" required>
-          <textarea name="message" placeholder="Project details / message" rows="4" required></textarea>
-          <div style="display:flex;gap:10px;margin-top:10px">
-            <button type="submit" class="btn btn-primary">Send Request</button>
-            <button type="reset" class="btn btn-ghost">Reset</button>
-          </div>
-        </form>
+        <p style="margin-top:12px;color:var(--muted)">H.No: 6-6-272, Vivekananda Nagar, Hyderabad Road, Nalgonda — 508001</p>
       </section>
 
-      <aside class="right">
-        <div class="panel">
-          <h4>Quick Info</h4>
-          <p>Sales • Installation • Service — VRV/VRF and centralised ductable systems. Authorized to service leading brands.</p>
-
-          <div class="meta-row">
-            <div style="margin-top:10px"><strong>Contact:</strong> M. Shiva Kumar</div>
-            <div style="margin-top:6px"><strong>Phones:</strong> <a href="tel:+919666627166">+91 96666 27166</a> / <a href="tel:+919676564055">+91 96765 64055</a></div>
-            <div style="margin-top:6px"><strong>Email:</strong> <a href="mailto:shiva.kumar4461@gmail.com">shiva.kumar4461@gmail.com</a></div>
-            <div style="margin-top:6px"><strong>GST:</strong> 36DGVPM2869H1ZL</div>
-            <div style="margin-top:6px"><strong>Address:</strong> H.No: 6-6-272, Vivekananda Nagar, Hyderabad Road, Nalgonda — 508001</div>
-          </div>
-
-          <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
-            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=6-6-272+Vivekananda+Nagar+Nalgonda" target="_blank" rel="noopener">View on Map</a>
-            <a class="btn btn-ghost" href="#quote">Request Quote</a>
-            <a class="btn btn-primary" href="https://wa.me/919666627166" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px">WhatsApp</a>
-          </div>
-
-          <div style="margin-top:12px">
-            <strong>Working Hours</strong>
-            <div style="font-size:13px;color:var(--muted);margin-top:6px">Mon — Sat: 9:00 AM — 7:00 PM<br>Emergency Service Available</div>
-          </div>
-        </div>
-
-        <div style="margin-top:16px" class="panel">
-          <h4>Location</h4>
-          <iframe class="map" loading="lazy"
-            src="https://www.google.com/maps?q=6-6-272+Vivekananda+Nagar+Nalgonda&output=embed"
-            title="Danfoss location"></iframe>
-          <div style="margin-top:10px">
-            <strong>Brands We Work With</strong>
-            <div class="brands">
-              <div class="brand-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Danfoss_logo.svg" alt="Danfoss" style="height:20px"/></div>
-              <div class="brand-chip"><svg viewBox="0 0 200 40" style="height:20px"><text x="0" y="14" font-family="Inter, Arial" font-size="14" font-weight="700" fill="#111">GENERAL</text></svg></div>
-              <div class="brand-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mitsubishi_Heavy_Industries_logo.svg" alt="MHI" style="height:18px"/></div>
-            </div>
-          </div>
-        </div>
+      <aside class="card">
+        <h4 style="margin:0 0 8px">Quick Info</h4>
+        <p style="margin:0;color:var(--muted)">Authorized service center for Danfoss. Also work with GENERAL and Mitsubishi Heavy Industries.</p>
+        <div style="margin-top:10px"><strong>Contact:</strong> M. Shiva Kumar</div>
+        <div style="margin-top:6px"><strong>Phone:</strong> +91 96666 27166 / +91 96765 64055</div>
+        <div style="margin-top:6px"><strong>Email:</strong> shiva.kumar4461@gmail.com</div>
       </aside>
     </main>
 
-    <section class="features" aria-label="Service highlights" style="margin-top:18px">
-      <div class="feature">
-        <h4 style="margin:0 0 8px">Commercial Refrigeration</h4>
-        <p style="margin:0;color:var(--muted)">Cold rooms, display cases, industrial chillers, preventive maintenance contracts and service agreements.</p>
-      </div>
-      <div class="feature">
-        <h4 style="margin:0 0 8px">VRV / VRF Systems</h4>
-        <p style="margin:0;color:var(--muted)">Design, supply and installation of energy-efficient multi-split systems for buildings and complexes.</p>
-      </div>
-      <div class="feature">
-        <h4 style="margin:0 0 8px">Installations & Repairs</h4>
-        <p style="margin:0;color:var(--muted)">Skilled technicians, genuine spares, warranty-backed repairs and preventive servicing.</p>
-      </div>
-    </section>
-
     <footer>
-      © <strong>Danfoss</strong> — Refrigeration & Air Conditioning • GST: 36DGVPM2869H1ZL • H.No: 6-6-272, Vivekananda Nagar, Hyderabad Road, Nalgonda — 508001
+      © <strong>Danfoss</strong> — Refrigeration & Air Conditioning • GST: 36DGVPM2869H1ZL
     </footer>
   </div>
-
-  <script>
-    // vCard download
-    (function(){
-      const btn = document.getElementById('downloadVcardBtn');
-      if(btn){
-        btn.addEventListener('click', function (e) {
-          e.preventDefault();
-          const vcard =
-`BEGIN:VCARD
-VERSION:3.0
-FN:M. Shiva Kumar
-ORG:Danfoss
-TITLE:Owner / Service Head
-TEL;TYPE=WORK,VOICE:+91 96666 27166
-TEL;TYPE=CELL:+91 96765 64055
-EMAIL:shiva.kumar4461@gmail.com
-ADR;TYPE=WORK:;;H.No: 6-6-272, Vivekananda Nagar, Hyderabad Road;Nalgonda;Telangana;508001;India
-NOTE:Brands: Danfoss · GENERAL · Mitsubishi Heavy Industries Ltd. — GST: 36DGVPM2869H1ZL
-END:VCARD`;
-          const blob = new Blob([vcard], {type: 'text/vcard;charset=utf-8'});
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement('a');
-          a.href = url;
-          a.download = 'Danfoss_M_Shiva_Kumar.vcf';
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-          URL.revokeObjectURL(url);
-        });
-      }
-    })();
-  </script>
 </body>
 </html>
