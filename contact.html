@@ -57,5 +57,17 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:22px;paddi
 
 <footer>© <strong>Danfoss</strong> — Refrigeration & Air Conditioning • GST: 36DGVPM2869H1ZL</footer>
 </div>
+<script>
+document.querySelector('form').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = this.querySelector('[name=name]').value;
+  const phone = this.querySelector('[name=phone]').value;
+  const email = this.querySelector('[name=email]').value;
+  const message = this.querySelector('[name=message]').value;
+  const text = `Hello, I'm ${name}%0A📞 Phone: ${phone}%0A✉️ Email: ${email}%0A💬 Message: ${message}`;
+  window.open(`https://wa.me/919666627166?text=${text}`, '_blank');
+});
+</script>
+
 </body>
 </html>
