@@ -1,77 +1,52 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Danfoss — Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --c1:#e11d48;--c2:#3b82f6;--c3:#06b6d4;
-      --muted:#6b7280;--maxW:1150px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Roboto,Arial;background:linear-gradient(180deg,#f7fbff 0%,#f2f6fb 100%);color:#071026}
-    .wrap{max-width:var(--maxW);margin:28px auto;padding:18px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-radius:14px;background:linear-gradient(90deg,#fff,rgba(255,255,255,0.9));box-shadow:0 8px 30px rgba(2,6,23,0.06)}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:56px}
-    .brand h1{margin:0;font-family:'Playfair Display',serif;font-size:22px}
-    nav a{color:#071026;text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
-    nav a:hover{background:linear-gradient(90deg,var(--c2),var(--c3));color:white}
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:18px;align-items:start}
-    .card{background:#fff;border-radius:16px;padding:22px;box-shadow:0 16px 40px rgba(2,6,23,0.06);border:1px solid rgba(230,234,240,0.9)}
-    .hero-left h2{font-size:28px;margin:0 0 8px}
-    .accent{background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:900}
-    .lead{color:var(--muted);margin-top:8px}
-    .actions{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
-    .btn{padding:10px 14px;border-radius:12px;font-weight:800;text-decoration:none;display:inline-block;cursor:pointer}
-    .btn-primary{background:linear-gradient(90deg,var(--c1),#ff7b6b);color:white}
-    .btn-ghost{background:white;border:1px solid #eef2f6;color:#071018}
-    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px;padding:18px}
-    @media(max-width:980px){.hero{grid-template-columns:1fr}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Danfoss — Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--c1:#e11d48;--c2:#3b82f6;--c3:#06b6d4;--muted:#6b7280;--maxW:1150px;}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui;background:linear-gradient(180deg,#f7fbff,#f2f6fb);color:#071026}
+.wrap{max-width:var(--maxW);margin:28px auto;padding:18px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-radius:14px;background:linear-gradient(90deg,#fff,rgba(255,255,255,0.9));box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+.brand{display:flex;align-items:center;gap:12px}.brand img{height:56px}
+nav a{color:#071026;text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
+nav a:hover{background:linear-gradient(90deg,var(--c2),var(--c3));color:#fff}
+.hero{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:18px;align-items:start}
+.card{background:#fff;border-radius:16px;padding:22px;box-shadow:0 16px 40px rgba(2,6,23,0.06)}
+.btn{padding:10px 14px;border-radius:12px;font-weight:700;text-decoration:none;display:inline-block;cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,var(--c1),#ff7b6b);color:white}
+.btn-ghost{background:white;border:1px solid #eef2f6;color:#071018}
+img.small{width:100%;border-radius:12px;margin-top:10px}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:22px;padding:18px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <img src="logo.png" alt="Danfoss logo">
-        <div>
-          <h1>Danfoss</h1>
-          <div style="color:var(--muted);font-weight:700;font-size:13px">Refrigeration and Air Conditioners — Sales & Service</div>
-        </div>
-      </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+<div class="wrap">
+<header>
+  <div class="brand"><img src="logo.png" alt="Danfoss logo"><div><h2 style="margin:0">Danfoss</h2><div style="color:var(--muted);font-size:13px">Refrigeration and Air Conditioners — Sales & Service</div></div></div>
+  <nav><a href="index.html">Home</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav>
+</header>
 
-    <main class="hero">
-      <section class="card hero-left">
-        <h2><span class="accent">Danfoss</span> — Refrigeration & Air Conditioning</h2>
-        <p class="lead">Sales, installation and maintenance of refrigeration & air conditioning systems. VRV / VRF, ductable & centralized systems, commercial chillers and preventive servicing.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="tel:+919666627166">Call Now</a>
-          <a class="btn btn-ghost" href="contact.html">Request Quote</a>
-        </div>
-        <p style="margin-top:12px;color:var(--muted)">H.No: 6-6-272, Vivekananda Nagar, Hyderabad Road, Nalgonda — 508001</p>
-      </section>
+<main class="hero">
+  <section class="card">
+    <h2 style="margin:0 0 10px;color:var(--c1)">Refrigeration & Air Conditioning</h2>
+    <p style="color:var(--muted)">Sales, installation and maintenance of refrigeration & AC systems: VRV / VRF, ductable & centralized systems, commercial chillers, and preventive servicing.</p>
+    <img class="small" src="https://images.unsplash.com/photo-1607860108855-3aa4b3e8efef?auto=format&fit=crop&w=800&q=60" alt="AC technician">
+    <div style="margin-top:14px"><a class="btn btn-primary" href="tel:+919666627166">Call Now</a> <a class="btn btn-ghost" href="contact.html">Request Quote</a></div>
+  </section>
+  <aside class="card">
+    <h4>Quick Info</h4>
+    <p style="color:var(--muted)">Authorized service center for Danfoss. Partnered with GENERAL and Mitsubishi Heavy Industries.</p>
+    <img class="small" src="https://images.unsplash.com/photo-1603126858267-8b37e32d4c4e?auto=format&fit=crop&w=800&q=60" alt="Cooling system">
+    <p style="margin-top:8px;font-size:14px;color:var(--muted)"><strong>Contact:</strong> M. Shiva Kumar<br>Phones: +91 96666 27166 / +91 96765 64055<br>Email: shiva.kumar4461@gmail.com</p>
+  </aside>
+</main>
 
-      <aside class="card">
-        <h4 style="margin:0 0 8px">Quick Info</h4>
-        <p style="margin:0;color:var(--muted)">Authorized service center for Danfoss. Also work with GENERAL and Mitsubishi Heavy Industries.</p>
-        <div style="margin-top:10px"><strong>Contact:</strong> M. Shiva Kumar</div>
-        <div style="margin-top:6px"><strong>Phone:</strong> +91 96666 27166 / +91 96765 64055</div>
-        <div style="margin-top:6px"><strong>Email:</strong> shiva.kumar4461@gmail.com</div>
-      </aside>
-    </main>
-
-    <footer>
-      © <strong>Danfoss</strong> — Refrigeration & Air Conditioning • GST: 36DGVPM2869H1ZL
-    </footer>
-  </div>
+<footer>© <strong>Danfoss</strong> — Refrigeration & Air Conditioning • GST: 36DGVPM2869H1ZL</footer>
+</div>
 </body>
 </html>
+
