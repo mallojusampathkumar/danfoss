@@ -1,56 +1,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Danfoss — Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--c1:#e11d48;--c2:#3b82f6;--muted:#6b7280;--maxW:1150px}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Roboto,Arial;background:linear-gradient(180deg,#fbfdff,#f2f6fb);color:#071026}
-    .wrap{max-width:var(--maxW);margin:28px auto;padding:18px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:12px;background:#fff;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{height:56px}
-    nav a{margin-left:8px;text-decoration:none;color:#071026;padding:8px;border-radius:8px;font-weight:700}
-    nav a.active{background:linear-gradient(90deg,var(--c2),#06b6d4);color:white}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
-    .card{background:white;padding:18px;border-radius:12px;box-shadow:0 12px 30px rgba(2,6,23,0.04);transition:transform .18s}
-    .card:hover{transform:translateY(-8px)}
-    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px;padding:18px}
-    @media(max-width:1000px){.grid{grid-template-columns:1fr}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Danfoss — Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--c1:#e11d48;--c2:#3b82f6;--muted:#6b7280;--maxW:1150px}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui;background:linear-gradient(180deg,#fbfdff,#f2f6fb);color:#071026}
+.wrap{max-width:var(--maxW);margin:28px auto;padding:18px}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:12px;background:#fff;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+.brand{display:flex;align-items:center;gap:12px}.brand img{height:56px}
+nav a{margin-left:8px;text-decoration:none;color:#071026;padding:8px;border-radius:8px;font-weight:700}
+nav a.active{background:linear-gradient(90deg,var(--c2),#06b6d4);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.card{background:#fff;padding:16px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.04);transition:transform .18s}
+.card:hover{transform:translateY(-8px)}
+img.thumb{width:100%;border-radius:10px;margin-top:8px}
+footer{text-align:center;color:var(--muted);font-size:13px;margin-top:22px;padding:18px}
+@media(max-width:1000px){.grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <img src="logo.png" alt="Danfoss logo">
-        <div><h2 style="margin:0">Danfoss</h2><div style="color:var(--muted);font-weight:700;font-size:13px">Refrigeration and Air Conditioners — Sales & Service</div></div>
-      </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a class="active" href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+<div class="wrap">
+<header>
+  <div class="brand"><img src="logo.png" alt="Danfoss logo"><div><h2 style="margin:0">Danfoss</h2><div style="color:var(--muted);font-size:13px">Refrigeration and Air Conditioners</div></div></div>
+  <nav><a href="index.html">Home</a><a class="active" href="services.html">Services</a><a href="contact.html">Contact</a></nav>
+</header>
 
-    <main>
-      <h2>Our Services</h2>
-      <div class="grid">
-        <div class="card"><h3>AC Sales & Installation</h3><p>Installation and sales of residential and commercial units with warranty.</p></div>
-        <div class="card"><h3>VRV / VRF Systems</h3><p>Design and supply of multi-split centralised air conditioning systems.</p></div>
-        <div class="card"><h3>Commercial Refrigeration</h3><p>Cold rooms, display cases, industrial chillers and maintenance contracts.</p></div>
-        <div class="card"><h3>Repairs & Maintenance</h3><p>Preventive and on-call repair with genuine spares and service guarantee.</p></div>
-        <div class="card"><h3>Energy Efficiency Upgrades</h3><p>Retrofit solutions for energy saving and performance optimization.</p></div>
-        <div class="card"><h3>Industrial Cooling</h3><p>Large-scale cooling solutions for factories and warehouses.</p></div>
-      </div>
-    </main>
+<main>
+<h2 style="margin:10px 0">Our Services</h2>
+<div class="grid">
+  <div class="card"><h3>AC Sales & Installation</h3><p>Residential and commercial sales with warranty.</p><img class="thumb" src="https://images.unsplash.com/photo-1581091870632-1e7ab8e7bba0?auto=format&fit=crop&w=600&q=60" alt="AC install"></div>
+  <div class="card"><h3>VRV / VRF Systems</h3><p>Design and supply of multi-split centralised systems.</p><img class="thumb" src="https://images.unsplash.com/photo-1581092783323-6b401d94d1da?auto=format&fit=crop&w=600&q=60" alt="VRF"></div>
+  <div class="card"><h3>Commercial Refrigeration</h3><p>Cold rooms and display cases for retail & industry.</p><img class="thumb" src="https://images.unsplash.com/photo-1601972599720-bd6f6a0b90f3?auto=format&fit=crop&w=600&q=60" alt="Refrigeration"></div>
+  <div class="card"><h3>Repairs & Maintenance</h3><p>Preventive and on-call repair with genuine spares.</p><img class="thumb" src="https://images.unsplash.com/photo-1601972599720-bd6f6a0b90f3?auto=format&fit=crop&w=600&q=60" alt="Repair"></div>
+  <div class="card"><h3>Energy Efficiency Upgrades</h3><p>Retrofit solutions for energy saving and performance optimization.</p><img class="thumb" src="https://images.unsplash.com/photo-1581092334423-1e7a1a3b6b42?auto=format&fit=crop&w=600&q=60" alt="Efficiency"></div>
+  <div class="card"><h3>Industrial Cooling</h3><p>Large-scale cooling solutions for factories and warehouses.</p><img class="thumb" src="https://images.unsplash.com/photo-1603126858267-8b37e32d4c4e?auto=format&fit=crop&w=600&q=60" alt="Industrial"></div>
+</div>
+</main>
 
-    <footer>
-      © <strong>Danfoss</strong> — Refrigeration & Air Conditioning • GST: 36DGVPM2869H1ZL
-    </footer>
-  </div>
+<footer>© <strong>Danfoss</strong> — Refrigeration & Air Conditioning • GST: 36DGVPM2869H1ZL</footer>
+</div>
 </body>
 </html>
