@@ -3,37 +3,44 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Danfoss — Home</title>
+<title>Danfoss — Refrigeration & Air Conditioning</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--c1:#e11d48;--c2:#3b82f6;--c3:#06b6d4;--muted:#6b7280;--maxW:1150px}
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter,system-ui,Roboto,Arial;background:#f7fbff;color:#071026}
-.wrap{max-width:var(--maxW);margin:0 auto;padding:18px}
-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;position:relative;z-index:10;background:rgba(255,255,255,0.85);border-radius:0 0 14px 14px;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
-.brand{display:flex;align-items:center;gap:12px}.brand img{height:56px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,Roboto,Arial;background:#f8fafc;color:#071026}
+header{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;position:sticky;top:0;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,0.05);z-index:50}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:56px}
 nav a{color:#071026;text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
 nav a:hover{background:linear-gradient(90deg,var(--c2),var(--c3));color:white}
-.video-hero{position:relative;height:70vh;min-height:400px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:white;text-align:center}
-.video-hero video{position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%);z-index:1}
-.video-hero::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);z-index:2}
+.video-hero{position:relative;height:75vh;min-height:400px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:white;text-align:center}
+.video-hero video{position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%)}
+.video-hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.45)}
 .video-hero .content{position:relative;z-index:3;padding:0 20px;max-width:720px}
-.video-hero h1{font-size:3rem;line-height:1.1;margin:0;color:#fff}
-.video-hero h1 .accent{background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.video-hero p{margin-top:14px;color:rgba(255,255,255,0.9);font-size:1.1rem}
-.video-hero .btn{margin-top:20px;padding:12px 18px;font-size:1rem;border-radius:10px;font-weight:700;text-decoration:none;background:linear-gradient(90deg,var(--c1),#ff7b6b);color:#fff}
-.section{padding:60px 18px}
-.services-preview .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.service-card{background:#fff;border-radius:12px;padding:22px;box-shadow:0 12px 30px rgba(2,6,23,0.04);transition:transform .18s}
-.service-card:hover{transform:translateY(-8px)}
-.service-card img{width:100%;border-radius:10px;margin-bottom:12px}
-footer{text-align:center;color:var(--muted);font-size:13px;padding:28px}
-@media(max-width:720px){.video-hero h1{font-size:2.2rem}}
+.video-hero h1{font-size:3rem;line-height:1.1}
+.video-hero .accent{background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;color:transparent}
+.video-hero p{margin-top:14px;color:#f3f4f6;font-size:1.1rem}
+.video-hero .btn{margin-top:24px;padding:12px 20px;border-radius:12px;background:linear-gradient(90deg,var(--c1),#ff7b6b);color:#fff;font-weight:700;text-decoration:none}
+section{padding:60px 18px;max-width:var(--maxW);margin:auto}
+h2.section-title{text-align:center;margin-bottom:40px;font-size:2rem;color:#0f172a}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.card{background:white;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.06);overflow:hidden;transition:transform .25s}
+.card:hover{transform:translateY(-6px)}
+.card img{width:100%;height:220px;object-fit:cover}
+.card .body{padding:18px}
+.card h3{margin-bottom:8px;color:#0f172a}
+.card p{color:var(--muted);line-height:1.6}
+.about{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:28px}
+.about img{width:100%;border-radius:12px}
+footer{margin-top:40px;text-align:center;padding:20px;background:#f1f5f9;color:#475569;font-size:14px}
+@media(max-width:900px){.video-hero h1{font-size:2.3rem}.about{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+
 <header>
-  <div class="brand"><img src="logo.png" alt="Danfoss logo"><div><h2 style="margin:0">Danfoss</h2><div style="color:var(--muted);font-size:13px">Refrigeration and Air Conditioners — Sales & Service</div></div></div>
+  <div class="brand"><img src="logo.png" alt="Danfoss logo"><h2>Danfoss</h2></div>
   <nav><a href="index.html">Home</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav>
 </header>
 
@@ -42,35 +49,31 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:28px}
     <source src="https://videos.pexels.com/video-files/856191/856191-hd_1280_720_30fps.mp4" type="video/mp4">
   </video>
   <div class="content">
-    <h1><span class="accent">Danfoss</span> Cooling Solutions</h1>
-    <p>Delivering world-class refrigeration & air conditioning systems — sales, installation, and service under one roof.</p>
+    <h1><span class="accent">Danfoss</span> Cooling & Climate Control</h1>
+    <p>We bring smart, sustainable, and reliable air conditioning & refrigeration solutions for homes and industries.</p>
     <a class="btn" href="contact.html">Request a Quote</a>
   </div>
 </section>
 
-<section class="section services-preview">
-  <div class="wrap">
-    <h2 style="text-align:center;margin-bottom:40px">Our Core Services</h2>
-    <div class="grid">
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1607860108855-3aa4b3e8efef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AC Installation">
-        <h3>AC Sales & Installation</h3>
-        <p>Residential & commercial units — end-to-end supply and install with warranty.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1603126858267-8b37e32d4c4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="VRV VRF">
-        <h3>VRV / VRF Systems</h3>
-        <p>Design, supply and install high-performance multi-split systems for buildings.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1597002233400-5f3900fbf8b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Refrigeration">
-        <h3>Commercial Refrigeration</h3>
-        <p>Cold storage, display units and industrial chillers for retail & industrial clients.</p>
-      </div>
-    </div>
+<section>
+  <h2 class="section-title">Our Core Services</h2>
+  <div class="grid">
+    <div class="card"><img src="https://images.unsplash.com/photo-1607860108855-3aa4b3e8efef?auto=format&fit=crop&w=1000&q=80"><div class="body"><h3>AC Sales & Installation</h3><p>Residential & commercial unit sales, installation, and maintenance with expert technicians.</p></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1603126858267-8b37e32d4c4e?auto=format&fit=crop&w=1000&q=80"><div class="body"><h3>VRV / VRF Systems</h3><p>Design and deployment of multi-split systems for modern buildings, ensuring energy efficiency.</p></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1597002233400-5f3900fbf8b0?auto=format&fit=crop&w=1000&q=80"><div class="body"><h3>Commercial Refrigeration</h3><p>Cold rooms, display chillers, and centralized cooling for industrial and retail environments.</p></div></div>
   </div>
 </section>
 
-<footer>© <strong>Danfoss</strong> — Refrigeration & Air Conditioning • GST: 36DGVPM2869H1ZL</footer>
+<section class="about">
+  <img src="https://images.unsplash.com/photo-1625047865495-bfe14e2a62b0?auto=format&fit=crop&w=1000&q=80" alt="Technicians">
+  <div>
+    <h2>Why Choose Danfoss?</h2>
+    <p>Danfoss has been at the forefront of energy-efficient cooling technologies. With our skilled technicians and advanced equipment, we ensure the best performance and durability of your HVAC systems. We specialize in VRV, VRF, ductable and centralized systems, and offer annual maintenance contracts for hassle-free servicing.</p>
+    <p><strong>Brands:</strong> Danfoss • GENERAL • Mitsubishi Heavy Industries</p>
+    <p><strong>GST:</strong> 36DGVPM2869H1ZL</p>
+  </div>
+</section>
+
+<footer>© 2025 Danfoss — Refrigeration & Air Conditioning • H.No: 6-6-272, Vivekananda Nagar, Hyderabad Road, Nalgonda — 508001</footer>
 </body>
 </html>
